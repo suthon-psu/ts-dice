@@ -15,7 +15,7 @@ export default class GameEngine {
         this.currentPlayer = this.p1
     }
 
-    nextPlayer(){
+    private nextPlayer(){
         this.currentPlayer = this.currentPlayer == this.p1 ? this.p2 : this.p1
     }
 

@@ -1,8 +1,13 @@
 import DiceBox from "./DiceBox"
 
 export default class Player {
-    currentPos = 0
+    _pos = 0
+
     name: string
+
+    get currentPos(): number{
+        return this._pos
+    }
 
     constructor(name: string){
         this.name = name
@@ -11,7 +16,8 @@ export default class Player {
     play(db: DiceBox){
         do{
             db.roll()
-            this.currentPos += db.getScore()
+            this._pos += db.getScore()
         }while(db.isCombo())
     }
+
 }

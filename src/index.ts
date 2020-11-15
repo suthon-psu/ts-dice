@@ -1,6 +1,7 @@
 import GameEngine from "./GameEngine"
 
 let engine = new GameEngine()
+
 while(!engine.isWon()){
     engine.play()
 }
